@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>Meu site</title>
 </head>
@@ -28,8 +29,9 @@
                         <li><a @click="dois">Formação</a></li>
                         <li><a @click="tres">Projetos</a></li>
                         <li><a @click="quatro">Contato</a></li>
-                    </ul>
+                    </ul>    
                 </nav>
+                <audio class="music" src="/assets/music/music.mp3" autoplay loop controls></audio>
             </div>
         </aside>
 
@@ -72,7 +74,7 @@
                 </div>
             </div>
         </section>
-
+        
         <section v-if="count == 2" class="section">
             <div class="container">
                 <div class="card white-bg">
@@ -135,9 +137,11 @@
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
             </div>
+            
         </section>
+        
+        
     </div>
-
     <script>
         var app = new Vue({
             el: '#app',

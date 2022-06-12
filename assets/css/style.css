@@ -11,6 +11,10 @@ html {
   font-size: 0.9rem;
 }
 
+audio{
+  margin-right: 4rem;
+}
+
 .white-bg {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -29,7 +33,7 @@ html {
 .menu-content {
   display: flex;
   height: 10vh;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding-top: 0;
   padding-bottom: 0;
@@ -67,6 +71,10 @@ html {
 .menu ul li a:hover::after {
   width: 100%;
   left: 0;
+}
+
+.menu ul li audio{
+  justify-content: flex-end;
 }
 
 .section {
@@ -155,7 +163,7 @@ html {
   display: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1210px) {
   html {
     overflow: auto;
   }
@@ -190,7 +198,7 @@ html {
     top: 2rem;
     right: 2rem;
     color: white;
-    background: black;
+    background: rgba(0, 0, 0, 0.2);
     font-size: 3rem;
     width: 4rem;
     height: 4rem;
@@ -250,7 +258,7 @@ html {
     top: 2rem;
     right: 2rem;
     color: white;
-    background: black;
+    background: rgba(0, 0, 0, 0.2);
     font-size: 3rem;
     width: 4rem;
     height: 4rem;
