@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel = "shortcut icon" type = "imagem/x-icon" href = "/assets/image/icon.ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Meu site</title>
+</head>
+
+<body>
+    <div id="app">
+        <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+        <label class="close-menu-label" for="close-menu" title="close menu"></label>
+
+        <aside class="menu white-bg">
+            <div class="menu-content">
+                <nav>
+                    <ul onclick="getElementById('close-menu').checked = false;">
+                        <li><a @click="um">Sobre Mim</a></li>
+                        <li><a @click="dois">Formação</a></li>
+                        <li><a @click="tres">Projetos</a></li>
+                        <li><a @click="quatro">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <section v-if="count == 0" class="section"></section>
+
+        <section v-if="count == 1" class="section">
+            <div class="container">
+                <div class="card white-bg">
+                    <h2>sobre mim</h2>
+                    <div class="details">
+                        <p class="mais-info">Procuro trabalho na área de programação front-end.</p>
+                        <p>Tenho 19 anos e estou em busca de oportunidade de trabalho na area de front-end para
+                            construir
+                            uma carreira e melhorar ainda mais meu conhecimento na area</p>
+                    </div>
+                </div>
+
+                <div class="card white-bg">
+                    <h2>Principais competências</h2>
+                    <div class="details">
+                        <p class="mais-info">Inglês - Básico</p>
+                        <p class="mais-info">HTML5 & CSS3 - intermediário</p>
+                        <p class="mais-info">React.Js - Básico</p>
+                        <p>Java-Script - Básico</p>
+                    </div>
+                </div>
+                <div class="card white-bg">
+                    <h2>Interesses</h2>
+                    <div class="details">
+                        <p class="mais-info">Aprendiz</p>
+                        <p class="mais-info">Estagiário</p>
+                        <p class="mais-info">Trainee</p>
+                        <p class="mais-info">Home Office</p>
+                    </div>
+                </div>
+                <div class="card white-bg">
+                    <h2>Pretensão Salarial</h2>
+                    <div class="details">
+                        <p class="mais-info">R$1.000,00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section v-if="count == 2" class="section">
+            <div class="container">
+                <div class="card white-bg">
+                    <h2>Universidade São Francisco</h2>
+                    <div class="details">
+                        <p>Graduação, Analise e Desenvolvimento de Sistemas (ADS) · (fevereiro de
+                            2022 - novembro de 2024)</p>
+                    </div>
+                </div>
+                <div class="card white-bg">
+                    <h2>Senac Brasil</h2>
+                    <div class="details">
+                        <p> Curso Técnico Integrado, Programação de sistemas desktop · (junho de
+                            2018 - agosto de 2019)</p>
+                    </div>
+                </div>
+                <div class="card white-bg">
+                    <h2>Udemy</h2>
+                    <div class="details">
+                        <p class="mais-info"> Ensino Técnico, React · (julho de 2021 - novembro de 2022).</p>
+                        <p> Curso Técnico Integrado, HTML e CSS · (junho de 2021 - novembro de 2021</p>
+                    </div>
+                </div>
+                <div class="card white-bg">
+                    <h2> EMEFM DARCY RIBEIRO</h2>
+                    <div class="details">
+                        <p> Ensino Médio Completo · (janeiro de 2018 - novembro de 2020)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section v-if="count == 3" class="section">
+            <div class="container">
+                <a href="https://fanciful-cobbler-96a0fe.netlify.app" target="_blank" class="card white-bg">
+                    <i class="fa-brands fa-react"></i>
+                </a>
+                <a href="https://kind-poincare-9e6be3.netlify.app" target="_blank" class="card white-bg">
+                    <i class="fa-brands fa-html5"></i>
+                </a>
+            </div>
+        </section>
+
+        <section v-if="count == 4" class="section">
+            <div class="container">
+                <div class="card white-bg">
+                    <h2>Contatos</h2>
+                    <div class="details">
+                        <p class="mais-info">Mattreis07@gmail.com</p>
+                        <p>(11)94703-6806</p>
+                    </div>
+                </div>
+                <a href="https://www.instagram.com/matt__reis/" target="_blank" class="card white-bg">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://github.com/MateusRSilva" target="_blank" class="card white-bg">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mateus-reis-858b7322b/" target="_blank" class="card white-bg">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                count: 0
+            },
+            methods: {
+                um: function () {
+                    this.count = 1;
+                },
+                dois: function () {
+                    this.count = 2;
+                },
+                tres: function () {
+                    this.count = 3;
+                },
+                quatro: function(){
+                    this.count = 4;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
