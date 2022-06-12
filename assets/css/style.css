@@ -49,6 +49,10 @@ html {
   text-decoration: none;
 }
 
+.menu ul li a:hover{
+  color: #dc143c;
+}
+
 .menu ul li a::after {
   content: '';
   position: absolute;
@@ -56,7 +60,7 @@ html {
   left: 50%;
   width: 0;
   height: 0.2rem;
-  background-color: white;
+  background-color: #dc143c;
   transition: all 300ms ease-in-out;
 }
 
@@ -87,7 +91,7 @@ html {
 
 .container a {
   text-decoration: none;
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .card {
@@ -113,6 +117,13 @@ html {
 .card:hover .details {
   opacity: 1;
   height: 100%;
+}
+
+.card-especial{
+  color: white;
+}
+.card-especial:hover{
+  color: #dc143c;
 }
 
 .details {
