@@ -132,6 +132,7 @@ audio{
 }
 .card-especial:hover{
   color: #dc143c;
+  background-color: black;
 }
 
 .details {
@@ -164,10 +165,6 @@ audio{
 }
 
 @media (max-width: 1210px) {
-  html {
-    overflow: auto;
-  }
-
   .main {
     display: block;
   }
@@ -175,6 +172,8 @@ audio{
   .menu {
     bottom: 0;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
   }
 
   .menu-content,
@@ -198,7 +197,7 @@ audio{
     top: 2rem;
     right: 2rem;
     color: white;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.9);
     font-size: 3rem;
     width: 4rem;
     height: 4rem;
@@ -235,6 +234,8 @@ audio{
   .menu {
     bottom: 0;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
   }
 
   .menu-content,
@@ -258,7 +259,7 @@ audio{
     top: 2rem;
     right: 2rem;
     color: white;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.9);
     font-size: 3rem;
     width: 4rem;
     height: 4rem;

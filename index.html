@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-    
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>Meu site</title>
 </head>
@@ -31,7 +30,7 @@
                         <li><a @click="quatro">Contato</a></li>
                     </ul>    
                 </nav>
-                <audio class="music" src="/assets/music/music.mp3" autoplay loop controls></audio>
+                <audio src="/assets/music/music.mp3" loop controls autoplay="autoplay"></audio>
             </div>
         </aside>
 
@@ -139,9 +138,8 @@
             </div>
             
         </section>
-        
-        
     </div>
+    
     <script>
         var app = new Vue({
             el: '#app',
