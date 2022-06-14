@@ -194,8 +194,8 @@ audio{
     content: '☰';
     position: fixed;
     z-index: 2;
-    top: 2rem;
-    right: 2rem;
+    top: 0.5rem;
+    right: 0.5rem;
     color: white;
     background: rgba(0, 0, 0, 0.9);
     font-size: 3rem;
@@ -256,8 +256,8 @@ audio{
     content: '☰';
     position: fixed;
     z-index: 2;
-    top: 2rem;
-    right: 2rem;
+    top: 0.5rem;
+    right: 0.5rem;
     color: white;
     background: rgba(0, 0, 0, 0.9);
     font-size: 3rem;
