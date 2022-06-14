@@ -129,10 +129,27 @@ audio{
 
 .card-especial{
   color: white;
+  transition-property: background-color;
+  border: 1px solid black;
+  transition: 0.6s ease-in-out;
 }
-.card-especial:hover{
-  color: #dc143c;
-  background-color: black;
+
+.card-especial:hover i{
+  animation: shake 0.5s;
+}
+
+.icon--instagram:hover{
+  background-image: radial-gradient(circle at 30% 107%,
+  #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  outline-color: #a02d76;
+}
+
+.icon--linkedin:hover{
+  background-color: #0077b5;
+}
+
+.icon--git:hover{
+  background-color: #2ea44f;
 }
 
 .details {
@@ -165,10 +182,6 @@ audio{
 }
 
 @media (max-width: 1210px) {
-  .main {
-    display: block;
-  }
-
   .menu {
     bottom: 0;
     text-align: center;
@@ -222,15 +235,8 @@ audio{
     margin-top: 50px;
   }
 }
+
 @media (max-height: 750px) {
-  html {
-    overflow: auto;
-  }
-
-  .main {
-    display: block;
-  }
-
   .menu {
     bottom: 0;
     text-align: center;
@@ -283,4 +289,11 @@ audio{
   .contato p:nth-child(1) {
     margin-top: 50px;
   }
+}
+
+@keyframes shake {
+  10%{transform: rotate(15deg)}
+  20%{transform: rotate(-15deg)}
+  30%{transform: rotate(15deg)}
+  40%{transform: rotate(-15deg)}
 }
