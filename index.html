@@ -28,6 +28,7 @@
                         <li><a @click="dois">Formação</a></li>
                         <li><a @click="tres">Projetos</a></li>
                         <li><a @click="quatro">Contato</a></li>
+                        <li class="exemplo"><a @click="zero">Ajuda</a></li>
                     </ul>    
                 </nav>
                 <audio controls autoplay>
@@ -36,14 +37,30 @@
             </div>
         </aside>
 
-        <section v-if="count == 0" class="section"></section>
+        <section v-if="count == 0" class="section">
+            <div class="container exemplo"> 
+                <div class="card white-bg">
+                    <h2>Exemplo</h2>
+                    <div class="details">
+                        <p>É assim que funciona o site!!!</p><br>
+                        <p>Fique a vontade para dar play na musica.</p><br>
+                        <p class="emogi">=)</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="info">Segure para aparecer<br> mais informações!</p>
+                    <i class="fa-solid fa-turn-down arrow"></i>
+                </div>
+            </div>
+        </section>
 
         <section v-if="count == 1" class="section">
             <div class="container">
                 <div class="card white-bg">
                     <h2>Sobre mim</h2>
                     <div class="details">
-                        <p class="mais-info">Procuro trabalho na área de programação front-end.</p>
+                        <p>Procuro trabalho na área de programação front-end.</p><br>
                         <p>Tenho 19 anos e estou em busca de oportunidade de trabalho na área de front-end para
                             construir uma carreira e melhorar ainda mais meu conhecimento na área</p>
                     </div>
@@ -52,25 +69,25 @@
                 <div class="card white-bg">
                     <h2>Principais competências</h2>
                     <div class="details">
-                        <p class="mais-info">Inglês - Básico</p>
-                        <p class="mais-info">HTML5 & CSS3 - intermediário</p>
-                        <p class="mais-info">React.Js - Básico</p>
+                        <p>Inglês - Básico</p><br>
+                        <p>HTML5 & CSS3 - intermediário</p><br>
+                        <p>React.Js - Básico</p><br>
                         <p>Java-Script - Básico</p>
                     </div>
                 </div>
                 <div class="card white-bg">
                     <h2>Interesses</h2>
                     <div class="details">
-                        <p class="mais-info">Aprendiz</p>
-                        <p class="mais-info">Estagiário</p>
-                        <p class="mais-info">Trainee</p>
-                        <p class="mais-info">Home Office</p>
+                        <p>Aprendiz</p><br>
+                        <p>Estagiário</p><br>
+                        <p>Trainee</p><br>
+                        <p>Home Office</p><br>
                     </div>
                 </div>
                 <div class="card white-bg">
                     <h2>Pretensão Salarial</h2>
                     <div class="details">
-                        <p class="mais-info">R$1.000,00</p>
+                        <p>R$1.000,00</p><br>
                     </div>
                 </div>
             </div>
@@ -95,7 +112,7 @@
                 <div class="card white-bg">
                     <h2>Udemy</h2>
                     <div class="details">
-                        <p class="mais-info"> Ensino Técnico, React · (julho de 2021 - novembro de 2022).</p>
+                        <p> Ensino Técnico, React · (julho de 2021 - novembro de 2022).</p><br>
                         <p> Curso Técnico Integrado, HTML e CSS · (junho de 2021 - novembro de 2021</p>
                     </div>
                 </div>
@@ -123,8 +140,8 @@
             <div class="container">
                 <div class="card white-bg">
                     <h2>Contatos</h2>
-                    <div class="details">
-                        <p class="mais-info">Mattreis07@gmail.com</p>
+                    <div class="details select">
+                        <p>Mattreis07@gmail.com</p><br>
                         <p>(11)94703-6806</p>
                     </div>
                 </div>
@@ -149,6 +166,9 @@
                 count: 0
             },
             methods: {
+                zero: function(){
+                    this.count = 0;
+                },
                 um: function () {
                     this.count = 1;
                 },

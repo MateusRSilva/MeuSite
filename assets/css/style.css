@@ -11,8 +11,34 @@ html {
   font-size: 0.9rem;
 }
 
+body {
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+   user-select: none;
+}
+
 audio{
   margin-right: 4rem;
+}
+
+.emogi{
+  transform: rotate(90deg);
+  font-size: 40px;
+}
+
+.arrow{
+  font-size: 100px;
+  color: #dc143c;
+  transform: rotate(90deg);
+  -webkit-text-stroke: 4px black;
+}
+
+.info{
+  font-size: 30px;
+  font-weight: bold;
+  color: #dc143c;
+  -webkit-text-stroke: 0.5px black;
 }
 
 .white-bg {
@@ -173,11 +199,15 @@ audio{
   cursor: text;
 }
 
-.mais-info {
-  margin-bottom: 20px;
+.select{
+  user-select:text;
 }
 
 .close-menu {
+  display: none;
+}
+
+.exemplo{
   display: none;
 }
 
@@ -332,6 +362,12 @@ audio{
 
   .contato p:nth-child(1) {
     margin-top: 50px;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1) {
+  ::i-block-chrome, .exemplo {
+      display: flex;
   }
 }
 
