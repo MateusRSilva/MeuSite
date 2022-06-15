@@ -182,6 +182,10 @@ audio{
 }
 
 @media (max-width: 1210px) {
+  html{
+    overflow: auto;
+    overflow-x: hidden;
+  }
   .menu {
     bottom: 0;
     text-align: center;
@@ -237,6 +241,10 @@ audio{
 }
 
 @media (max-height: 750px) {
+  html{
+    overflow: auto;
+    overflow-x: hidden;
+  }
   .menu {
     bottom: 0;
     text-align: center;
