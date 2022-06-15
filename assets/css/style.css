@@ -9,13 +9,7 @@ html {
   overflow: hidden;
   font-family: 'Orbitron', sans-serif;
   font-size: 0.9rem;
-}
-
-body {
-  -webkit-user-select: none;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-   user-select: none;
+  user-select: none;
 }
 
 audio{
@@ -203,12 +197,9 @@ audio{
   transition: 0.5s ease;
 }
 
-.details p {
-  cursor: text;
-}
-
 .select{
   user-select:text;
+  cursor: text;
 }
 
 .close-menu {
@@ -223,23 +214,6 @@ audio{
   html{
     overflow: auto;
     overflow-x: hidden;
-  }
-
-  html::-webkit-scrollbar-track {
-   
-    border-radius: 30px;
-  }
-  html::-webkit-scrollbar{
-    width: 5px;
-    border-radius: 30px;
-    
-  }
-  html::-webkit-scrollbar-thumb {
-    background: black;
-    border-radius: 30px;
-  }
-  html::-webkit-scrollbar-track-piece{
-    background: rgba(0, 0, 0, 0.5);
   }
 
   .menu {
@@ -302,23 +276,6 @@ audio{
     overflow-x: hidden;
   }
 
-  html::-webkit-scrollbar-track {
-   
-    border-radius: 30px;
-  }
-  html::-webkit-scrollbar{
-    width: 5px;
-    border-radius: 30px;
-    
-  }
-  html::-webkit-scrollbar-thumb {
-    background: black;
-    border-radius: 30px;
-  }
-  html::-webkit-scrollbar-track-piece{
-    background: rgba(0, 0, 0, 0.5);
-  }
-
   .menu {
     bottom: 0;
     text-align: center;
@@ -370,12 +327,6 @@ audio{
 
   .contato p:nth-child(1) {
     margin-top: 50px;
-  }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1) {
-  ::i-block-chrome, .exemplo {
-      display: flex;
   }
 }
 
