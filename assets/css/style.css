@@ -166,6 +166,7 @@ span p{
 .config{
   justify-content: flex-end;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
