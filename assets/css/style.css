@@ -16,8 +16,74 @@ audio{
   margin-right: 4rem;
 }
 
-.btnCell {
+span p{
+  margin-top: -22px;
+}
+
+.night{
+  background-image: url(/assets/image/bg.gif);
+  background-size: cover;
+  background-position: center;
+}
+
+.light{
+  background-image: url(/assets/image/white-bg.gif);
+  background-size: cover;
+  background-position: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 2rem;
+}
+
+.switch input {
   display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #333031;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: black;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.check:checked + .slider {
+  background-color: #10b395;
+}
+
+.check:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 .emogi{
@@ -97,8 +163,10 @@ audio{
   left: 0;
 }
 
-.menu ul li audio{
+.config{
   justify-content: flex-end;
+  display: flex;
+  align-items: center;
 }
 
 .section {
@@ -109,9 +177,6 @@ audio{
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  background-image: url(/assets/image/bg.gif);
-  background-size: cover;
-  background-position: center;
 }
 
 .container {
@@ -210,7 +275,7 @@ audio{
   display: none;
 }
 
-.exemplo{
+.btnCell {
   display: none;
 }
 

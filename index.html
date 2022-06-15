@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel = "shortcut icon" type = "imagem/x-icon" href = "/assets/image/icon.ico"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="imagem/x-icon" href="/assets/image/icon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
@@ -28,138 +30,270 @@
                         <li><a @click="dois">Formação</a></li>
                         <li><a @click="tres">Projetos</a></li>
                         <li><a @click="quatro">Contato</a></li>
-                        <li class="exemplo"><a @click="zero">Ajuda</a></li>
-                    </ul>    
+                    </ul>
                 </nav>
-                <audio controls autoplay>
-                    <source src="/assets/music/music.mp3" type="audio/mpeg">
-                  </audio>
+                <div class="config">
+                    <label class="switch">
+                        <input class="check" type="checkbox" v-model="checked">
+                        <span class="slider round"><p>Day/night</p></span>
+                    </label>
+                    <audio controls autoplay>
+                        <source src="/assets/music/music.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
             </div>
         </aside>
+        <div class="night" v-if="checked == false">
+            <section v-if="count == 0" class="section"></section>
 
-        <section v-if="count == 0" class="section"></section>
+            <section v-if="count == 1" class="section">
+                <div class="container">
+                    <input class="btnCell" type="checkbox" id="sobre-mim" />
+                    <label class="card white-bg" for="sobre-mim">
+                        <h2>Sobre mim</h2>
+                        <div class="details">
+                            <p>Procuro trabalho na área de programação front-end.</p><br>
+                            <p>Tenho 19 anos e estou em busca de oportunidade de trabalho na área de front-end para
+                                construir uma carreira e melhorar ainda mais meu conhecimento na área</p>
+                        </div>
+                    </label>
 
-        <section v-if="count == 1" class="section">
-            <div class="container">
-                <input class="btnCell" type="checkbox" id="sobre-mim"/>
-                <label class="card white-bg" for="sobre-mim">                   
-                    <h2>Sobre mim</h2>
-                    <div class="details">
-                        <p>Procuro trabalho na área de programação front-end.</p><br>
-                        <p>Tenho 19 anos e estou em busca de oportunidade de trabalho na área de front-end para
-                            construir uma carreira e melhorar ainda mais meu conhecimento na área</p>
-                    </div>
-                </label>
+                    <input class="btnCell" type="checkbox" id="principais-competencias" />
+                    <label class="card white-bg" for="principais-competencias">
+                        <h2>Principais competências</h2>
+                        <div class="details">
+                            <p>Inglês - Básico</p><br>
+                            <p>HTML5 & CSS3 - intermediário</p><br>
+                            <p>React.Js - Básico</p><br>
+                            <p>Java-Script - Básico</p>
+                        </div>
+                    </label>
+                    <input class="btnCell" type="checkbox" id="interesses" />
+                    <label class="card white-bg" for="interesses">
+                        <h2>Interesses</h2>
+                        <div class="details">
+                            <p>Aprendiz</p><br>
+                            <p>Estagiário</p><br>
+                            <p>Trainee</p><br>
+                            <p>Home Office</p><br>
+                        </div>
+                    </label>
+                    <input class="btnCell" type="checkbox" id="pretensao-salarial" />
+                    <label class="card white-bg" for="pretensao-salarial">
+                        <h2>Pretensão Salarial</h2>
+                        <div class="details">
+                            <p>R$1.000,00</p><br>
+                        </div>
+                    </label>
+                </div>
+            </section>
 
-                <input class="btnCell" type="checkbox" id="principais-competencias"/>
-                <label class="card white-bg" for="principais-competencias">  
-                    <h2>Principais competências</h2>
-                    <div class="details">
-                        <p>Inglês - Básico</p><br>
-                        <p>HTML5 & CSS3 - intermediário</p><br>
-                        <p>React.Js - Básico</p><br>
-                        <p>Java-Script - Básico</p>
-                    </div>
-                </label>
-                <input class="btnCell" type="checkbox" id="interesses"/>
-                <label class="card white-bg" for="interesses"> 
-                    <h2>Interesses</h2>
-                    <div class="details">
-                        <p>Aprendiz</p><br>
-                        <p>Estagiário</p><br>
-                        <p>Trainee</p><br>
-                        <p>Home Office</p><br>
-                    </div>
-                </label>
-                <input class="btnCell" type="checkbox" id="pretensao-salarial"/>
-                <label class="card white-bg" for="pretensao-salarial">
-                    <h2>Pretensão Salarial</h2>
-                    <div class="details">
-                        <p>R$1.000,00</p><br>
-                    </div>
-                </label>
-            </div>
-        </section>
-        
-        <section v-if="count == 2" class="section">
-            <div class="container">
-                <input class="btnCell" type="checkbox" id="USF"/>
-                <label class="card white-bg" for="USF"> 
-                    <h2>Universidade São Francisco</h2>
-                    <div class="details">
-                        <p>Graduação, Analise e Desenvolvimento de Sistemas (ADS) · (fevereiro de
-                            2022 - novembro de 2024)</p>
-                    </div>
-                </label>
-                <input class="btnCell" type="checkbox" id="senac"/>
-                <label class="card white-bg" for="senac"> 
-                    <h2>Senac Brasil</h2>
-                    <div class="details">
-                        <p> Curso Técnico Integrado, Programação de sistemas desktop · (junho de
-                            2018 - agosto de 2019)</p>
-                    </div>
-                </label>
-                <input class="btnCell" type="checkbox" id="udemy"/>
-                <label class="card white-bg" for="udemy"> 
-                    <h2>Udemy</h2>
-                    <div class="details">
-                        <p> Ensino Técnico, React · (julho de 2021 - novembro de 2022).</p><br>
-                        <p> Curso Técnico Integrado, HTML e CSS · (junho de 2021 - novembro de 2021</p>
-                    </div>
-                </label>
-                <input class="btnCell" type="checkbox" id="darcy"/>
-                <label class="card white-bg" for="darcy"> 
-                    <h2> EMEFM DARCY RIBEIRO</h2>
-                    <div class="details">
-                        <p> Ensino Médio Completo · (janeiro de 2018 - novembro de 2020)</p>
-                    </div>
-                </label>
-            </div>
-        </section>
+            <section v-if="count == 2" class="section">
+                <div class="container">
+                    <input class="btnCell" type="checkbox" id="USF" />
+                    <label class="card white-bg" for="USF">
+                        <h2>Universidade São Francisco</h2>
+                        <div class="details">
+                            <p>Graduação, Analise e Desenvolvimento de Sistemas (ADS) · (fevereiro de
+                                2022 - novembro de 2024)</p>
+                        </div>
+                    </label>
+                    <input class="btnCell" type="checkbox" id="senac" />
+                    <label class="card white-bg" for="senac">
+                        <h2>Senac Brasil</h2>
+                        <div class="details">
+                            <p> Curso Técnico Integrado, Programação de sistemas desktop · (junho de
+                                2018 - agosto de 2019)</p>
+                        </div>
+                    </label>
+                    <input class="btnCell" type="checkbox" id="udemy" />
+                    <label class="card white-bg" for="udemy">
+                        <h2>Udemy</h2>
+                        <div class="details">
+                            <p> Ensino Técnico, React · (julho de 2021 - novembro de 2022).</p><br>
+                            <p> Curso Técnico Integrado, HTML e CSS · (junho de 2021 - novembro de 2021</p>
+                        </div>
+                    </label>
+                    <input class="btnCell" type="checkbox" id="darcy" />
+                    <label class="card white-bg" for="darcy">
+                        <h2> EMEFM DARCY RIBEIRO</h2>
+                        <div class="details">
+                            <p> Ensino Médio Completo · (janeiro de 2018 - novembro de 2020)</p>
+                        </div>
+                    </label>
+                </div>
+            </section>
 
-        <section v-if="count == 3" class="section">
-            <div class="container">
-                <a href="https://fanciful-cobbler-96a0fe.netlify.app" target="_blank" class="card card-especial white-bg icon--react">
-                    <i class="fa-brands fa-react"></i>
-                </a>
-                <a href="https://kind-poincare-9e6be3.netlify.app" target="_blank" class="card card-especial white-bg icon--html">
-                    <i class="fa-brands fa-html5"></i>
-                </a>
-            </div>
-        </section>
-        
-        <section v-if="count == 4" class="section">
-            <div class="container">
-                <input class="btnCell" type="checkbox" id="contato"/>
-                <label class="card white-bg" for="contato">
-                    <h2>Contatos</h2>
-                    <div class="details select">
-                        <p>Mattreis07@gmail.com</p><br>
-                        <p>(11)94703-6806</p>
-                    </div>
-                </label>
-                <a href="https://www.instagram.com/matt__reis/" target="_blank" class="card card-especial white-bg icon--instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://github.com/MateusRSilva" target="_blank" class="card card-especial icon--git white-bg">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/mateus-reis-858b7322b/" target="_blank" class="card card-especial icon--linkedin white-bg">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-            </div>
-            
-        </section>
+            <section v-if="count == 3" class="section">
+                <div class="container">
+                    <a href="https://fanciful-cobbler-96a0fe.netlify.app" target="_blank"
+                        class="card card-especial white-bg icon--react">
+                        <i class="fa-brands fa-react"></i>
+                    </a>
+                    <a href="https://kind-poincare-9e6be3.netlify.app" target="_blank"
+                        class="card card-especial white-bg icon--html">
+                        <i class="fa-brands fa-html5"></i>
+                    </a>
+                </div>
+            </section>
+
+            <section v-if="count == 4" class="section">
+                <div class="container">
+                    <input class="btnCell" type="checkbox" id="contato" />
+                    <label class="card white-bg" for="contato">
+                        <h2>Contatos</h2>
+                        <div class="details select">
+                            <p>Mattreis07@gmail.com</p><br>
+                            <p>(11)94703-6806</p>
+                        </div>
+                    </label>
+                    <a href="https://www.instagram.com/matt__reis/" target="_blank"
+                        class="card card-especial white-bg icon--instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/MateusRSilva" target="_blank"
+                        class="card card-especial icon--git white-bg">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mateus-reis-858b7322b/" target="_blank"
+                        class="card card-especial icon--linkedin white-bg">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+
+            </section>
+        </div>
+        <div class="light" v-if="checked == true">
+            <section v-if="count == 0" class="section"></section>
+
+            <section v-if="count == 1" class="section">
+                <div class="container">
+                    <input class="btnCell" type="checkbox" id="sobre-mim" />
+                    <label class="card white-bg" for="sobre-mim">
+                        <h2>Sobre mim</h2>
+                        <div class="details">
+                            <p>Procuro trabalho na área de programação front-end.</p><br>
+                            <p>Tenho 19 anos e estou em busca de oportunidade de trabalho na área de front-end para
+                                construir uma carreira e melhorar ainda mais meu conhecimento na área</p>
+                        </div>
+                    </label>
+
+                    <input class="btnCell" type="checkbox" id="principais-competencias" />
+                    <label class="card white-bg" for="principais-competencias">
+                        <h2>Principais competências</h2>
+                        <div class="details">
+                            <p>Inglês - Básico</p><br>
+                            <p>HTML5 & CSS3 - intermediário</p><br>
+                            <p>React.Js - Básico</p><br>
+                            <p>Java-Script - Básico</p>
+                        </div>
+                    </label>
+                    <input class="btnCell" type="checkbox" id="interesses" />
+                    <label class="card white-bg" for="interesses">
+                        <h2>Interesses</h2>
+                        <div class="details">
+                            <p>Aprendiz</p><br>
+                            <p>Estagiário</p><br>
+                            <p>Trainee</p><br>
+                            <p>Home Office</p><br>
+                        </div>
+                    </label>
+                    <input class="btnCell" type="checkbox" id="pretensao-salarial" />
+                    <label class="card white-bg" for="pretensao-salarial">
+                        <h2>Pretensão Salarial</h2>
+                        <div class="details">
+                            <p>R$1.000,00</p><br>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
+            <section v-if="count == 2" class="section">
+                <div class="container">
+                    <input class="btnCell" type="checkbox" id="USF" />
+                    <label class="card white-bg" for="USF">
+                        <h2>Universidade São Francisco</h2>
+                        <div class="details">
+                            <p>Graduação, Analise e Desenvolvimento de Sistemas (ADS) · (fevereiro de
+                                2022 - novembro de 2024)</p>
+                        </div>
+                    </label>
+                    <input class="btnCell" type="checkbox" id="senac" />
+                    <label class="card white-bg" for="senac">
+                        <h2>Senac Brasil</h2>
+                        <div class="details">
+                            <p> Curso Técnico Integrado, Programação de sistemas desktop · (junho de
+                                2018 - agosto de 2019)</p>
+                        </div>
+                    </label>
+                    <input class="btnCell" type="checkbox" id="udemy" />
+                    <label class="card white-bg" for="udemy">
+                        <h2>Udemy</h2>
+                        <div class="details">
+                            <p> Ensino Técnico, React · (julho de 2021 - novembro de 2022).</p><br>
+                            <p> Curso Técnico Integrado, HTML e CSS · (junho de 2021 - novembro de 2021</p>
+                        </div>
+                    </label>
+                    <input class="btnCell" type="checkbox" id="darcy" />
+                    <label class="card white-bg" for="darcy">
+                        <h2> EMEFM DARCY RIBEIRO</h2>
+                        <div class="details">
+                            <p> Ensino Médio Completo · (janeiro de 2018 - novembro de 2020)</p>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
+            <section v-if="count == 3" class="section">
+                <div class="container">
+                    <a href="https://fanciful-cobbler-96a0fe.netlify.app" target="_blank"
+                        class="card card-especial white-bg icon--react">
+                        <i class="fa-brands fa-react"></i>
+                    </a>
+                    <a href="https://kind-poincare-9e6be3.netlify.app" target="_blank"
+                        class="card card-especial white-bg icon--html">
+                        <i class="fa-brands fa-html5"></i>
+                    </a>
+                </div>
+            </section>
+
+            <section v-if="count == 4" class="section">
+                <div class="container">
+                    <input class="btnCell" type="checkbox" id="contato" />
+                    <label class="card white-bg" for="contato">
+                        <h2>Contatos</h2>
+                        <div class="details select">
+                            <p>Mattreis07@gmail.com</p><br>
+                            <p>(11)94703-6806</p>
+                        </div>
+                    </label>
+                    <a href="https://www.instagram.com/matt__reis/" target="_blank"
+                        class="card card-especial white-bg icon--instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/MateusRSilva" target="_blank"
+                        class="card card-especial icon--git white-bg">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mateus-reis-858b7322b/" target="_blank"
+                        class="card card-especial icon--linkedin white-bg">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+
+            </section>
+        </div>
     </div>
-    
+
     <script>
         var app = new Vue({
             el: '#app',
             data: {
-                count: 0
+                count: 0,
+                checked: ''
             },
             methods: {
-                zero: function(){
+                zero: function () {
                     this.count = 0;
                 },
                 um: function () {
@@ -171,7 +305,7 @@
                 tres: function () {
                     this.count = 3;
                 },
-                quatro: function(){
+                quatro: function () {
                     this.count = 4;
                 }
             }
