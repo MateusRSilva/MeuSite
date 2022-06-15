@@ -178,6 +178,14 @@ audio{
   background-color: #2ea44f;
 }
 
+.icon--html:hover{
+  background-color: #e34c26;
+}
+
+.icon--react:hover{
+  background-color: #61DBFB;
+}
+
 .details {
   color: white;
   position: absolute;
