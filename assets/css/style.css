@@ -33,8 +33,7 @@ span p{
 }
 
 .switch {
-  position: relative;
-  display: inline-block;
+  position:relative;
   width: 60px;
   height: 34px;
   margin-right: 2rem;
@@ -164,7 +163,6 @@ span p{
 }
 
 .config{
-  justify-content: flex-end;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -280,7 +278,7 @@ span p{
   display: none;
 }
 
-@media (max-width: 1210px) {
+@media (max-width: 1355px) {
   html{
     overflow: auto;
     overflow-x: hidden;
