@@ -186,6 +186,24 @@ audio{
     overflow: auto;
     overflow-x: hidden;
   }
+
+  html::-webkit-scrollbar-track {
+   
+    border-radius: 30px;
+  }
+  html::-webkit-scrollbar{
+    width: 5px;
+    border-radius: 30px;
+    
+  }
+  html::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 30px;
+  }
+  html::-webkit-scrollbar-track-piece{
+    background: rgba(0, 0, 0, 0.5);
+  }
+
   .menu {
     bottom: 0;
     text-align: center;
@@ -245,6 +263,24 @@ audio{
     overflow: auto;
     overflow-x: hidden;
   }
+
+  html::-webkit-scrollbar-track {
+   
+    border-radius: 30px;
+  }
+  html::-webkit-scrollbar{
+    width: 5px;
+    border-radius: 30px;
+    
+  }
+  html::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 30px;
+  }
+  html::-webkit-scrollbar-track-piece{
+    background: rgba(0, 0, 0, 0.5);
+  }
+
   .menu {
     bottom: 0;
     text-align: center;
