@@ -138,13 +138,15 @@ span p{
   cursor: pointer;
   display: block;
   margin: 1rem 4rem;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: bold;
   position: relative;
   text-decoration: none;
 }
 
 .menu ul li a:hover{
   color: #dc143c;
+  animation: neon 3s infinite;
 }
 
 .menu ul li a::after {
@@ -425,4 +427,16 @@ span p{
   20%{transform: rotate(-15deg)}
   30%{transform: rotate(15deg)}
   40%{transform: rotate(-15deg)}
+}
+
+@keyframes neon{
+  1%, 10%, 30%, 40%, 60%, 70%, 90%, 100%{
+    text-shadow: 
+    white 0 0 12px,
+    #dc143c 0 0 24px,
+    #dc143c 0 0 36px;
+  }
+  35%, 38%, 45%, 65%, 95%{
+    text-shadow: none;
+  }
 }
