@@ -360,7 +360,7 @@ span p {
   .close-menu-label::after {
     content: '☰';
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     top: 0.5rem;
     right: 0.5rem;
     color: white;
