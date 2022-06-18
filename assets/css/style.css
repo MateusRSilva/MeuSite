@@ -101,7 +101,7 @@ span p {
   right: 0;
   width: 100vw;
   border-bottom: 0.2rem solid black;
-  z-index: 1;
+  z-index: 2;
 }
 
 .menu-content {
@@ -330,7 +330,7 @@ span p {
 }
 
 /* mediaquerry */
-@media (max-width: 1355px) {
+@media (max-width: 1425px) {
   html {
     overflow: auto;
     overflow-x: hidden;
