@@ -86,25 +86,6 @@ span p{
   border-radius: 50%;
 }
 
-.emogi{
-  transform: rotate(90deg);
-  font-size: 40px;
-}
-
-.arrow{
-  font-size: 100px;
-  color: #dc143c;
-  transform: rotate(90deg);
-  -webkit-text-stroke: 4px black;
-}
-
-.info{
-  font-size: 30px;
-  font-weight: bold;
-  color: #dc143c;
-  -webkit-text-stroke: 0.5px black;
-}
-
 .white-bg {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -221,33 +202,38 @@ span p{
 .card-especial{
   color: white;
   transition-property: background-color;
-  border: 1px solid black;
+  border: none;
   transition: 0.6s ease-in-out;
+  box-shadow: none;
 }
 
 .card-especial:hover i{
-  animation: shake 0.5s;
+  animation: shake 0.5s;  
 }
 
-.icon--instagram:hover{
+.icon--instagram{
+  box-shadow: inset 0 0 0.4em black, 0 0 1em black;
   background-image: radial-gradient(circle at 30% 107%,
   #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-  outline-color: #a02d76;
 }
 
-.icon--linkedin:hover{
+.icon--linkedin{
+  box-shadow: inset 0 0 0.4em black, 0 0 1em black;
   background-color: #0077b5;
 }
 
-.icon--git:hover{
+.icon--git{
+  box-shadow: inset 0 0 0.4em black, 0 0 1em black;
   background-color: #6e5494;
 }
 
-.icon--html:hover{
+.icon--html{
+  box-shadow: inset 0 0 0.4em black, 0 0 1em black;
   background-color: #e34c26;
 }
 
-.icon--react:hover{
+.icon--react{
+  box-shadow: inset 0 0 0.4em black, 0 0 1em black;
   background-color: #61DBFB;
 }
 
@@ -279,6 +265,60 @@ span p{
 
 .btnCell {
   display: none;
+}
+
+.face{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.8rem;
+  background-size: cover;
+  background-position: center center;
+  transition:transform 0.5s ease-in-out;
+}
+
+.face--front{
+  font-size: 5rem;
+  z-index: 1;
+}
+
+.face--front p{
+  transition:0.5s ease-in-out;
+}
+
+.face--back{
+  font-size: 1.3rem;
+  transform: rotateX(180deg);
+  z-index: 0;
+}
+
+.face--back p{
+  color: #ffffff00;
+  transition:1s ease-in-out;
+}
+
+.card:hover .face--front{
+  box-shadow: inset 0 0 0.1em black, 0 0 0.1em black;
+  transform: rotateX(-180deg);
+}
+
+.card:hover .face--front p{
+  color: #ffffff00;
+}
+
+.card:hover .face--back{
+  background: rgba(0, 0, 0, 0.411);
+  transform: rotateX(0deg);
+  z-index: 2;
+}
+
+.card:hover .face--back p{
+  color: #ecf0f1;
 }
 
 @media (max-width: 1355px) {
