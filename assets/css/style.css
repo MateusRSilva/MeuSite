@@ -12,28 +12,35 @@ html {
   user-select: none;
 }
 
-audio{
+audio {
   margin-right: 4rem;
 }
 
-span p{
+span p {
   margin-top: -22px;
 }
 
-.night{
+/* telas */
+.night {
   background-image: url(/assets/image/bg.gif);
   background-size: cover;
   background-position: center;
 }
 
-.light{
+.light {
   background-image: url(/assets/image/white-bg.gif);
   background-size: cover;
   background-position: center;
 }
 
+.white-bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/* switch */
 .switch {
-  position:relative;
+  position: relative;
   margin: 10px;
   width: 60px;
   height: 34px;
@@ -68,11 +75,11 @@ span p{
   transition: .4s;
 }
 
-.check:checked + .slider {
+.check:checked+.slider {
   background-color: #10b395;
 }
 
-.check:checked + .slider:before {
+.check:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -86,11 +93,7 @@ span p{
   border-radius: 50%;
 }
 
-.white-bg {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-}
-
+/* menu */
 .menu {
   position: fixed;
   top: 0;
@@ -125,7 +128,7 @@ span p{
   text-decoration: none;
 }
 
-.menu ul li a:hover{
+.menu ul li a:hover {
   color: #dc143c;
   animation: neon 3s infinite;
 }
@@ -146,12 +149,18 @@ span p{
   left: 0;
 }
 
-.config{
+.config {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
+.close-menu {
+  display: none;
+}
+
+
+/* containers */
 .section {
   margin: 0;
   min-height: 100vh;
@@ -174,6 +183,7 @@ span p{
   font-size: 60px;
 }
 
+/* card-text */
 .card {
   margin: 5vh;
   height: 15rem;
@@ -199,44 +209,6 @@ span p{
   height: 100%;
 }
 
-.card-especial{
-  color: white;
-  transition-property: background-color;
-  border: none;
-  transition: 0.6s ease-in-out;
-  box-shadow: none;
-}
-
-.card-especial:hover i{
-  animation: shake 0.5s;  
-}
-
-.icon--instagram{
-  box-shadow: inset 0 0 0.4em black, 0 0 1em black;
-  background-image: radial-gradient(circle at 30% 107%,
-  #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-}
-
-.icon--linkedin{
-  box-shadow: inset 0 0 0.4em black, 0 0 1em black;
-  background-color: #0077b5;
-}
-
-.icon--git{
-  box-shadow: inset 0 0 0.4em black, 0 0 1em black;
-  background-color: #6e5494;
-}
-
-.icon--html{
-  box-shadow: inset 0 0 0.4em black, 0 0 1em black;
-  background-color: #e34c26;
-}
-
-.icon--react{
-  box-shadow: inset 0 0 0.4em black, 0 0 1em black;
-  background-color: #61DBFB;
-}
-
 .details {
   color: white;
   position: absolute;
@@ -254,24 +226,33 @@ span p{
   transition: 0.5s ease;
 }
 
-.select p{
-  user-select:text;
+.select p {
+  user-select: text;
   cursor: text;
-}
-
-.close-menu {
-  display: none;
 }
 
 .btnCell {
   display: none;
 }
 
-.face{
+/* cards-link */
+.card-especial {
+  color: white;
+  transition-property: background-color;
+  border: none;
+  transition: 0.6s ease-in-out;
+  box-shadow: none;
+}
+
+.card-especial:hover i {
+  animation: shake 0.5s;
+}
+
+.face {
   display: flex;
   justify-content: center;
   align-items: center;
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -279,50 +260,78 @@ span p{
   border-radius: 0.8rem;
   background-size: cover;
   background-position: center center;
-  transition:transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
-.face--front{
+.face--front {
   font-size: 5rem;
   z-index: 1;
 }
 
-.face--front p{
-  transition:0.5s ease-in-out;
+.face--front p {
+  transition: 0.5s ease-in-out;
 }
 
-.face--back{
+.face--back {
   font-size: 1.3rem;
   transform: rotateX(180deg);
   z-index: 0;
 }
 
-.face--back p{
+.face--back p {
   color: #ffffff00;
-  transition:1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
-.card:hover .face--front{
+.card:hover .face--front {
   box-shadow: inset 0 0 0.1em black, 0 0 0.1em black;
   transform: rotateX(-180deg);
 }
 
-.card:hover .face--front p{
+.card:hover .face--front p {
   color: #ffffff00;
 }
 
-.card:hover .face--back{
+.card:hover .face--back {
   background: rgba(0, 0, 0, 0.411);
   transform: rotateX(0deg);
   z-index: 2;
 }
 
-.card:hover .face--back p{
+.card:hover .face--back p {
   color: #ecf0f1;
 }
 
+/* cards-link-color */
+.icon--instagram {
+  box-shadow: inset 0 0 0.4em black, 0 0 1em black;
+  background-image: radial-gradient(circle at 30% 107%,
+      #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+.icon--linkedin {
+  box-shadow: inset 0 0 0.4em black, 0 0 1em black;
+  background-color: #0077b5;
+}
+
+.icon--git {
+  box-shadow: inset 0 0 0.4em black, 0 0 1em black;
+  background-color: #6e5494;
+}
+
+.icon--html {
+  box-shadow: inset 0 0 0.4em black, 0 0 1em black;
+  background-color: #e34c26;
+}
+
+.icon--react {
+  box-shadow: inset 0 0 0.4em black, 0 0 1em black;
+  background-color: #61DBFB;
+}
+
+/* mediaquerry */
 @media (max-width: 1355px) {
-  html{
+  html {
     overflow: auto;
     overflow-x: hidden;
   }
@@ -382,17 +391,17 @@ span p{
 }
 
 @media (max-height: 750px) {
-  html{
+  html {
     overflow: auto;
     overflow-x: hidden;
   }
 
-  #btnControl:checked + label > .details {
+  #btnControl:checked+label>.details {
     opacity: 1;
     height: 100%;
   }
-  
-  #btnControl:checked + label > .card{
+
+  #btnControl:checked+label>.card {
     transform: scale(1.3);
   }
 
@@ -450,8 +459,8 @@ span p{
   }
 }
 
-@media (max-width: 450px){
-  .btnCell:checked + label > .details {
+@media (max-width: 450px) {
+  .btnCell:checked+label>.details {
     opacity: 1;
     height: 100%;
   }
@@ -462,21 +471,34 @@ span p{
   }
 }
 
+/* keyframes */
 @keyframes shake {
-  10%{transform: rotate(15deg)}
-  20%{transform: rotate(-15deg)}
-  30%{transform: rotate(15deg)}
-  40%{transform: rotate(-15deg)}
+  10% {
+    transform: rotate(15deg)
+  }
+
+  20% {
+    transform: rotate(-15deg)
+  }
+
+  30% {
+    transform: rotate(15deg)
+  }
+
+  40% {
+    transform: rotate(-15deg)
+  }
 }
 
-@keyframes neon{
-  1%, 10%, 30%, 40%, 60%, 70%, 90%, 100%{
-    text-shadow: 
-    white 0 0 12px,
-    #dc143c 0 0 24px,
-    #dc143c 0 0 36px;
+@keyframes neon {
+  1%, 10%, 30%, 40%, 60%, 70%, 90%, 100% {
+    text-shadow:
+      white 0 0 12px,
+      #dc143c 0 0 24px,
+      #dc143c 0 0 36px;
   }
-  35%, 38%, 45%, 65%, 95%{
+
+  35%, 38%, 45%, 65%, 95% {
     text-shadow: none;
   }
 }
