@@ -388,69 +388,13 @@ span p {
   .contato p:nth-child(1) {
     margin-top: 50px;
   }
+
 }
-
-@media (max-height: 1000px) {
-  html {
-    overflow: auto;
-    overflow-x: hidden;
-  }
-
-  .menu {
-    bottom: 0;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
-  }
-
-  .menu-content,
-  .menu-content ul {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .menu-content {
-    height: 100vh;
-  }
-
-  .menu {
-    display: none;
-  }
-
-  .close-menu-label::after {
-    content: '☰';
-    position: fixed;
-    top: 0.5rem;
-    right: 0.5rem;
-    color: white;
-    background: rgba(0, 0, 0, 0.9);
-    font-size: 3rem;
-    width: 4rem;
-    height: 4rem;
-    text-align: center;
-    padding: 0.5rem;
-    cursor: pointer;
-  }
-
-  .close-menu:checked~.menu {
-    display: block;
-  }
-
-  .close-menu:checked~.close-menu-label::after {
-    content: '×';
-  }
-
-  .menu-spacing {
-    display: none;
-  }
-
-  .contato p:nth-child(1) {
-    margin-top: 50px;
-  }
-  .btnCell:checked+ .card .details{
+@media (max-width: 500px) {
+    .btnCell:checked+ .card .details{
     opacity: 1;
     height: 100%;
-  }
+    }
 }
 
 /* keyframes */
