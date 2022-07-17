@@ -390,7 +390,7 @@ span p {
   }
 }
 
-@media (max-height: 750px) {
+@media (max-height: 1000px) {
   html {
     overflow: auto;
     overflow-x: hidden;
