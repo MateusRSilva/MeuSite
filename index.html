@@ -183,9 +183,9 @@
                         </div>
                     </a>
                 </div>
-
             </section>
         </div>
+        
         <div class="light" v-if="checked == true">
             <section v-if="count == 0" class="section"></section>
 
@@ -327,34 +327,33 @@
 
             </section>
         </div>
-    </div>
 
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                count: 0,
-                checked: ''
-            },
-            methods: {
-                zero: function () {
-                    this.count = 0;
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    count: 0,
+                    checked: ''
                 },
-                um: function () {
-                    this.count = 1;
-                },
-                dois: function () {
-                    this.count = 2;
-                },
-                tres: function () {
-                    this.count = 3;
-                },
-                quatro: function () {
-                    this.count = 4;
+                methods: {
+                    zero: function () {
+                        this.count = 0;
+                    },
+                    um: function () {
+                        this.count = 1;
+                    },
+                    dois: function () {
+                        this.count = 2;
+                    },
+                    tres: function () {
+                        this.count = 3;
+                    },
+                    quatro: function () {
+                        this.count = 4;
+                    }
                 }
-            }
-        })
-    </script>
+            })
+        </script>
 </body>
 
 </html>
