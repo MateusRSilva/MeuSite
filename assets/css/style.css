@@ -447,6 +447,10 @@ span p {
   .contato p:nth-child(1) {
     margin-top: 50px;
   }
+  .btnCell:checked+ .card .details{
+    opacity: 1;
+    height: 100%;
+  }
 }
 
 /* keyframes */
