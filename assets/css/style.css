@@ -330,7 +330,7 @@ span p {
 }
 
 /* mediaquerry */
-@media (max-width: 1425px) {
+@media (max-width: 1450px) {
   html {
     overflow: auto;
     overflow-x: hidden;
